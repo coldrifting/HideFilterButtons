@@ -3,9 +3,9 @@ using ICities;
 using System;
 using UnityEngine;
 
-namespace HideFilterButtons_NS
+namespace HideFilterButtons
 {
-    public class Loading : LoadingExtensionBase, IUserMod
+    public class HideFilterButtons : LoadingExtensionBase, IUserMod
     {
         public string Name => "Hide Filter Buttons";
         public string Description => "Removes those annoying little buttons in the build panels";
@@ -15,13 +15,13 @@ namespace HideFilterButtons_NS
         /// </summary>
         public override void OnLevelLoaded(LoadMode mode)
         {
-            HideFilterButtons();
+            Hide();
         }
 
         /// <summary>
         /// Seeks and destroys all filter buttons in the UI.
         /// </summary>
-        public void HideFilterButtons()
+        public void Hide()
         {
             try
             {
